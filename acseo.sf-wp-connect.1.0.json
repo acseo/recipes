@@ -1,6 +1,6 @@
 {
     "manifests": {
-        "acseoteam/sf-wp-connect": {
+        "acseo/sf-wp-connect": {
             "manifest": {
                 "post-install-output": [
                     "  * <fg=blue>C'est prêt !</> Vous pouvez maintenant :",
