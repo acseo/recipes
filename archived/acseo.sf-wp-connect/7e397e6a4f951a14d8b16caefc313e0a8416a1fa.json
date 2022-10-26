@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "acseo/sf-wp-connect": {
+            "manifest": {
+                "post-install-output": [
+                    "  <fg=blue>C'est pr\u00eat !</> Vous pouvez maintenant :",
+                    "    1. D\u00e9velopper vos routes d'API dans le dossier <comment>src/Controller/ApiWP</comment>",
+                    "    2. Renseigner une valeur pour la variable d'environnement <comment>WP_API_TOKEN</comment>",
+                    "    3. Mettre en place ensuite cette variable d'environnement sur vos diff\u00e9rents environnements (fichier d'env enregistr\u00e9s sur GitLab pour la CI, fichier .env du serveur de prod...)"
+                ]
+            },
+            "files": [],
+            "ref": "7e397e6a4f951a14d8b16caefc313e0a8416a1fa"
+        }
+    }
+}
