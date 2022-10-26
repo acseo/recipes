@@ -4,4 +4,4 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 
 | Package | Latest Recipe |
 | --- | --- |
-| [acseo/sf-wp-connect](https://packagist.org/packages/acseo/sf-wp-connect) | [1.0](acseo/sf-wp-connect/1.0) |
+| [acseo/sf-wp-connect](https://packagist.org/packages/acseo/sf-wp-connect) | [1.1](acseo/sf-wp-connect/1.1) |
