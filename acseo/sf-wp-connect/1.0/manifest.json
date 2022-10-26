@@ -1,8 +1,9 @@
 {
-    "post-install-output": [
-        "  <fg=blue>C'est prêt !</> Vous pouvez maintenant :",
-        "    1. Développer vos routes d'API dans le dossier <comment>src/Controller/ApiWP</comment>",
-        "    2. Renseigner une valeur pour la variable d'environnement <comment>WP_API_TOKEN</comment>",
-        "    3. Mettre en place ensuite cette variable d'environnement sur vos différents environnements (fichier d'env enregistrés sur GitLab pour la CI, fichier .env du serveur de prod...)"
-    ]
+    "env": {
+        "API_WP_TOKEN": "%generate(secret)%"
+    },
+    "copy-from-package": {
+        "config": "%CONFIG_DIR%/",
+        "src": "%SRC_DIR%/"
+    }
 }
