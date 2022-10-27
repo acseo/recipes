@@ -2,7 +2,7 @@
     "env": {
         "API_WP_TOKEN": "%generate(secret)%"
     },
-    "copy-from-recipe": {
+    "copy-from-package": {
         "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/"
     }

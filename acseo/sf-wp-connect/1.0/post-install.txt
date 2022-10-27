@@ -1,0 +1,26 @@
+<fg=blue>C'est presque prêt !</>
+Il ne reste plus que quelques lignes à ajouter au fichier <comment>config/packages/security.yaml</comment> :
+
+<fg=cyan>security</>:
+    <fg=cyan>providers</>:
+        <fg=cyan>api_wp_provider</>:
+            <fg=cyan>memory</>:
+                <fg=cyan>users</>:
+                    <fg=cyan>api_wp</>: { <fg=cyan>roles</>: [<fg=yellow>'ROLE_API_WP'</>] }
+
+    <fg=cyan>firewalls</>:
+        <fg=gray># À placer en tout premier</>
+        <fg=cyan>api_wp</>:
+            <fg=cyan>pattern</>: ^/api/wp/
+            <fg=cyan>stateless</>: <fg=red>true</>
+            <fg=cyan>provider</>: api_wp_provider
+            <fg=cyan>custom_authenticator</>: App\ApiWp\Security\TokenAuthenticator
+
+    <fg=cyan>access_control</>:
+        <fg=gray># À placer en tout premier</>
+        - { <fg=cyan>path</>: ^/api/wp, <fg=cyan>roles</>: ROLE_API_WP }
+
+<fg=blue>Vous pouvez maintenant :</>
+  1. Développer vos routes d'API dans le dossier <comment>src/ApiWP/Controller</comment>
+  2. Mettre en place la variable d'environnement <comment>WP_API_TOKEN</comment> sur vos différents environnements (fichier d'env enregistrés sur GitLab pour la CI, fichier .env du serveur de prod, etc...)
+  3. Faire vos appels aux API mises en place en envoyant un header X-AUTH-TOKEN avec la valeur du token <comment>WP_API_TOKEN</comment> indiqué dans le <comment>.env</comment>
